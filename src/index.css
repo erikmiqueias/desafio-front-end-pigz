@@ -64,9 +64,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
   }
-}
 
-body {
-  font-family: "Poppins", sans-serif;
+  input {
+    @apply outline-none border-none;
+  }
 }
