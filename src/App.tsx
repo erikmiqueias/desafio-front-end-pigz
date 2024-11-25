@@ -13,7 +13,7 @@ function App() {
           Já sou parceiro
         </Button>
       </header>
-      <section className="flex bg-orange-500 h-auto flex-col">
+      <section className="flex max-w-[414px] h-[1015px] bg-orange-500 flex-col">
         <div className="py-8">
           <div className="flex justify-between mx-3">
             <h1 className="text-white text-4xl font-bold w-72">
