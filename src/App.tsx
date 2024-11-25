@@ -31,15 +31,8 @@ function App() {
           </p>
         </div>
 
-        <div className="w-[376px] h-[570px] bg-white rounded-3xl self-center text-[#333333]">
-          <div className="flex flex-col items-center gap-1 mt-6">
-            <h2 className="text-[28px] font-semibold">Quero vender no Pigz</h2>
-            <h3 className="text-[13px]">
-              Dê o primeiro passo para aumentar suas vendas
-            </h3>
-          </div>
-
-          <FirstForm />
+        <div className="mt-7 flex items-center flex-col w-[376px] h-[570px] bg-white rounded-3xl self-center text-[#333333]">
+          {<FirstForm />}
         </div>
       </section>
     </>

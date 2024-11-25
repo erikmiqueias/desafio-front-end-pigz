@@ -1,16 +1,47 @@
+import { useForm } from "react-hook-form";
 import br from "../../assets/brazil-.png";
-
 import { Form, FormControl, FormField, FormItem, FormLabel } from "../ui/form";
-
 import { Input } from "../ui/input";
-import { onFirstFormSubmit, useFirstFormHook } from "../../helpers/validation";
 import { Select, SelectTrigger, SelectValue } from "../ui/select";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "../ui/button";
+
+const firstFormSchema = z.object({
+  name: z
+    .string({
+      message: "Nome obrigatório",
+    })
+    .min(1, {
+      message: "Nome obrigatório",
+    }),
+  email: z.string().email().min(1, {
+    message: "E-mail obrigatório",
+  }),
+  phoneNumber: z.string().min(1, {
+    message: "Telefone obrigatório",
+  }),
+});
 
 const FirstForm = () => {
-  const form = useFirstFormHook();
+  const onSubmit = (data: z.infer<typeof firstFormSchema>) => {
+    const { email, name, phoneNumber } = data;
+    localStorage.setItem(name, JSON.stringify(data));
+    localStorage.setItem(email, JSON.stringify(data));
+    localStorage.setItem(phoneNumber, JSON.stringify(data));
+  };
+
+  const form = useForm<z.infer<typeof firstFormSchema>>({
+    resolver: zodResolver(firstFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phoneNumber: "",
+    },
+  });
 
   return (
-    <div className="flex mt-8 ml-5 items-center flex-col">
+    <div className="flex mt-8 ml-5 flex-col transition-transform">
       <div className="self-start mb-6">
         <h1 className="text-[28px] font-semibold mb-1">Quero vender no Pigz</h1>
         <h3 className="text-[13px]">
@@ -19,10 +50,7 @@ const FirstForm = () => {
       </div>
 
       <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onFirstFormSubmit)}
-          className="space-y-5"
-        >
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
           <FormField
             control={form.control}
             name="name"
@@ -89,6 +117,13 @@ const FirstForm = () => {
             </p>
           </div>
         </form>
+        <Button
+          type="button"
+          onClick={() => form.handleSubmit(onSubmit)()}
+          className="mt-[57px] h-[48px] w-[334px] rounded-2xl bg-orange-600 text-white"
+        >
+          Continuar
+        </Button>
       </Form>
     </div>
   );

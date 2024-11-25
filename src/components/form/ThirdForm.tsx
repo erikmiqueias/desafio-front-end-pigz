@@ -1,22 +1,38 @@
 import { Form, FormControl, FormField, FormItem, FormLabel } from "../ui/form";
-
 import { Input } from "../ui/input";
-import { onThirdFormSubmit, useThirdFormHook } from "../../helpers/validation";
 import { Select, SelectTrigger, SelectValue } from "../ui/select";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "../ui/button";
+
+const thirdFormSchema = z.object({
+  storeName: z.string().min(1),
+  cnpj: z.string().min(14),
+  storeType: z.string().min(1),
+});
 
 const ThirdForm = () => {
-  const form = useThirdFormHook();
+  const form = useForm<z.infer<typeof thirdFormSchema>>({
+    resolver: zodResolver(thirdFormSchema),
+    defaultValues: {
+      storeName: "",
+      cnpj: "",
+      storeType: "",
+    },
+  });
+
+  function onSubmit(data: z.infer<typeof thirdFormSchema>) {
+    console.log(data);
+  }
 
   return (
-    <div className="flex mt-8 ml-3 items-center flex-col mb-12">
+    <div className="flex mt-8 ml-5 flex-col transition-transform">
       <h1 className="text-[28px] font-semibold self-start ml-3 mb-6">
         Me conta um pouco sobre a sua loja
       </h1>
       <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onThirdFormSubmit)}
-          className="space-y-5"
-        >
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
           <FormField
             control={form.control}
             name="storeName"
@@ -58,7 +74,7 @@ const ThirdForm = () => {
           <FormField
             control={form.control}
             name="storeType"
-            render={({ ...field }) => (
+            render={({ field }) => (
               <FormItem>
                 <div className="flex gap-2 flex-col">
                   <Select>
@@ -72,6 +88,13 @@ const ThirdForm = () => {
             )}
           />
         </form>
+        <Button
+          onClick={() => form.handleSubmit(onSubmit)()}
+          type="button"
+          className="mt-[105px] h-[48px] w-[334px] rounded-2xl bg-orange-600 text-white"
+        >
+          Concluir
+        </Button>
       </Form>
     </div>
   );
