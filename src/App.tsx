@@ -3,6 +3,12 @@ import pigzLogo from "./assets/Pigz Gestão - Logo.svg";
 import { Button } from "./components/ui/button";
 import hamburgerSection from "./assets/hamburger-with-floating-ingredients-on-dark-background/hamburger-with-floating-ingredients-on-dark-background.png";
 import FirstForm from "./components/form/FirstForm";
+import pigzDouble from "./assets/Grupo 3535.svg";
+import CardSection from "./components/CardSection";
+import storeIcon from "./assets/storefront_black_24dp.svg";
+import phoneIcon from "./assets/smartphone_black_24dp.svg";
+import pigzGestao from "./assets/Grupo 3545.svg";
+import printerIcon from "./assets/print_black_24dp.svg";
 
 function App() {
   return (
@@ -33,6 +39,41 @@ function App() {
 
         <div className="mt-7 flex items-center flex-col w-[376px] h-[570px] bg-white rounded-3xl self-center text-[#333333]">
           {<FirstForm />}
+        </div>
+      </section>
+
+      <div className="relative flex justify-center">
+        <img className="absolute -top-16" src={pigzDouble} alt="" />
+      </div>
+
+      <section className="flex flex-col items-center mt-28 text-[#333]">
+        <h3 className="font-bold text-2xl w-[286px] text-center">
+          Você tem um novo Pigzdido!
+        </h3>
+        <div className="mt-10 gap-5">
+          <CardSection
+            cardTitle="Marketplace"
+            cardSubtitle="Pra sua loja vender mais"
+            src={storeIcon}
+          />
+
+          <CardSection
+            cardTitle="É fácil e rápido"
+            cardSubtitle="Fazer um pedido no Pigz"
+            src={phoneIcon}
+          />
+
+          <CardSection
+            cardTitle="Pigz Gestão"
+            cardSubtitle="Você no controle, sempre"
+            src={pigzGestao}
+          />
+
+          <CardSection
+            cardTitle="Vias de impressão"
+            cardSubtitle="Pesonalizáveis"
+            src={printerIcon}
+          />
         </div>
       </section>
     </>
