@@ -9,6 +9,7 @@ import storeIcon from "./assets/storefront_black_24dp.svg";
 import phoneIcon from "./assets/smartphone_black_24dp.svg";
 import pigzGestao from "./assets/Grupo 3545.svg";
 import printerIcon from "./assets/print_black_24dp.svg";
+import PaginationSection from "./components/PaginationSection";
 
 function App() {
   return (
@@ -75,6 +76,18 @@ function App() {
             src={printerIcon}
           />
         </div>
+
+        <div className="flex flex-col items-center mt-10 gap-7">
+          <h3 className="font-bold text-2xl text-center w-[334px]">
+            Tudo que você precisa por apenas R$199/mês
+          </h3>
+          <p className="w-[286px] text-[16px] text-center">
+            Tenha todas as funcionalidades Pigz sem taxa de adesão, sem comissão
+            por cada venda, sem letrinhas miúdas
+          </p>
+        </div>
+
+        <PaginationSection />
       </section>
     </>
   );
