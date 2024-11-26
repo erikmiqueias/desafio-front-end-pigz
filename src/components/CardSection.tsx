@@ -12,6 +12,9 @@ const CardSection = ({ cardTitle, cardSubtitle, src }: CardSectionProps) => {
         <h2 className="text-[20px] font-semibold">{cardTitle}</h2>
         <p className="font-normal">{cardSubtitle}</p>
       </div>
+      <div>
+        <span>R$199/mês</span>
+      </div>
     </div>
   );
 };
