@@ -71,4 +71,8 @@
   input {
     @apply outline-none border-none;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
