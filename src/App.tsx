@@ -20,6 +20,7 @@ import instagramLogo from "./assets/instagram-with-circle.svg";
 import facebookLogo from "./assets/facebook-with-circle.svg";
 import youtubeLogo from "./assets/youtube-with-circle.svg";
 import orangeLogo from "./assets/logo-orange-horizontal-branco.svg";
+import { Separator } from "./components/ui/separator";
 
 function App() {
   return (
@@ -240,8 +241,9 @@ function App() {
             </div>
 
             <div className="mb-5">
-              <span></span>
-              <div className="flex gap-6">
+              <Separator className="mt-14 mb-4 w-[98%] bg-[#666]" />
+              <Separator orientation="vertical" />
+              <div className="flex gap-6 mb-5">
                 <a
                   href="#"
                   className="text-[#666] text-[12px] transition-[2s] duration-200 hover:scale-[1.1] hover:underline"
