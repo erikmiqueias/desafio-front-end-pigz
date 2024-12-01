@@ -44,3 +44,5 @@ Seu desafio será criar a landpage do Pigz para clientes, neste momento você n�
 
 https://github.com/orangebr/vagas/tree/main/desafios/desafio-frontend-pigz#desafio-frontend-pigz
 https://xd.adobe.com/view/ff23f156-a96e-4cf3-a0fb-bc2646c1945a-aa70/specs/
+
+<span>Refatorações em desenvolvimento...</span>
