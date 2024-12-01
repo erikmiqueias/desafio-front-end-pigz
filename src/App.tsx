@@ -2,7 +2,6 @@ import "./App.css";
 import pigzLogo from "./assets/Pigz Gestão - Logo.svg";
 import { Button } from "./components/ui/button";
 import hamburgerSection from "./assets/hamburger-with-floating-ingredients-on-dark-background/hamburger-with-floating-ingredients-on-dark-background.png";
-import FirstForm from "./components/form/FirstForm";
 import pigzDouble from "./assets/Grupo 3535.svg";
 import CardSection from "./components/CardSection";
 import storeIcon from "./assets/storefront_black_24dp.svg";
@@ -21,6 +20,7 @@ import facebookLogo from "./assets/facebook-with-circle.svg";
 import youtubeLogo from "./assets/youtube-with-circle.svg";
 import orangeLogo from "./assets/logo-orange-horizontal-branco.svg";
 import { Separator } from "./components/ui/separator";
+import FormRegister from "./components/form/FormRegister";
 
 function App() {
   return (
@@ -34,15 +34,17 @@ function App() {
       </header>
       <section className="flex max-w-auto h-[1015px] bg-orange-500 flex-col">
         <div className="py-8">
-          <div className="flex justify-between mx-3">
+          <div className="flex justify-between ml-3 w-full max-h-[200px]">
             <h1 className="text-white text-4xl font-bold w-72">
               Pigz: tudo que você precisa pra vender ainda mais!
             </h1>
-            <img
-              className="absolute -right-14 top-8 w-48"
-              src={hamburgerSection}
-              alt="hamburguer"
-            />
+            <figure className="absolute top-[20px] -right-20">
+              <img
+                className="w-[250px] h-[300px]"
+                src={hamburgerSection}
+                alt="hamburguer"
+              />
+            </figure>
           </div>
           <p className="text-white mt-6 mx-4">
             Temos uma equipe ansiosa para cadastrar seus produtos no Pigz
@@ -52,9 +54,11 @@ function App() {
 
         <div
           id="form"
-          className="mt-7 flex items-center flex-col w-[376px] h-[570px] bg-white rounded-3xl self-center text-[#333333]"
+          className="mt-7 w-[376px] min-h-[570px] bg-white rounded-3xl self-center text-[#333]"
         >
-          {<FirstForm />}
+          <div>
+            <FormRegister />
+          </div>
         </div>
       </section>
 
