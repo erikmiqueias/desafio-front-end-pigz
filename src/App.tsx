@@ -18,11 +18,13 @@ import {
   youtubeLogo,
   orangeLogo,
 } from "./assets/";
-import CardSection from "./components/CardSection";
-import { Button } from "./components/ui/button";
-import PaginationSection from "./components/PaginationSection";
-import { Separator } from "./components/ui/separator";
-import FormRegister from "./components/form/FormRegister";
+import {
+  CardSection,
+  Button,
+  PaginationSection,
+  Separator,
+  FormRegister,
+} from "./components/";
 
 function App() {
   return (
