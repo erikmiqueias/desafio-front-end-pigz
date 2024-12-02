@@ -1,24 +1,26 @@
 import "./App.css";
-import pigzLogo from "./assets/Pigz Gestão - Logo.svg";
-import { Button } from "./components/ui/button";
-import hamburgerSection from "./assets/hamburger-with-floating-ingredients-on-dark-background/hamburger-with-floating-ingredients-on-dark-background.png";
-import pigzDouble from "./assets/Grupo 3535.svg";
+import {
+  pigzLogo,
+  hamburgerSection,
+  pigzDouble,
+  storeIcon,
+  phoneIcon,
+  pigzGestao,
+  printerIcon,
+  whatsapp,
+  pigzBlackAndWhite,
+  appStore,
+  playStore,
+  headPhone,
+  linkedinLogo,
+  instagramLogo,
+  facebookLogo,
+  youtubeLogo,
+  orangeLogo,
+} from "./assets/";
 import CardSection from "./components/CardSection";
-import storeIcon from "./assets/storefront_black_24dp.svg";
-import phoneIcon from "./assets/smartphone_black_24dp.svg";
-import pigzGestao from "./assets/Grupo 3545.svg";
-import printerIcon from "./assets/print_black_24dp.svg";
+import { Button } from "./components/ui/button";
 import PaginationSection from "./components/PaginationSection";
-import whatsapp from "./assets/Icon awesome-whatsapp.svg";
-import pigzBlackAndWhite from "./assets/pigz-logotipo-colorido.svg";
-import appStore from "./assets/selo-app-store.svg";
-import playStore from "./assets/selo-google-play.svg";
-import headPhone from "./assets/icone-fale-conosco.svg";
-import linkedinLogo from "./assets/linkedin-with-circle.svg";
-import instagramLogo from "./assets/instagram-with-circle.svg";
-import facebookLogo from "./assets/facebook-with-circle.svg";
-import youtubeLogo from "./assets/youtube-with-circle.svg";
-import orangeLogo from "./assets/logo-orange-horizontal-branco.svg";
 import { Separator } from "./components/ui/separator";
 import FormRegister from "./components/form/FormRegister";
 
