@@ -1,8 +1,5 @@
 import { useState } from "react";
-import phone from "../assets/phoneImg/Grupo de máscara 2417.png";
-import laptop from "../assets/laptop/Grupo de máscara 2418.png";
-import delivery from "../assets/delivery/Grupo de máscara 2420.png";
-import cardPayment from "../assets/mobile/mobile.png";
+import { phone, laptop, delivery, cardPayment } from "../assets/index";
 
 import { content } from "../helpers/content";
 

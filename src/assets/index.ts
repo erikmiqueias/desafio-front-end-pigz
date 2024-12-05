@@ -15,6 +15,10 @@ import instagramLogo from "./instagram-with-circle.svg";
 import facebookLogo from "./facebook-with-circle.svg";
 import youtubeLogo from "./youtube-with-circle.svg";
 import orangeLogo from "./logo-orange-horizontal-branco.svg";
+import phone from "./phoneImg/Grupo de máscara 2417.png";
+import laptop from "./laptop/Grupo de máscara 2418.png";
+import delivery from "./delivery/Grupo de máscara 2420.png";
+import cardPayment from "./mobile/mobile.png";
 
 export {
   pigzLogo,
@@ -34,4 +38,8 @@ export {
   facebookLogo,
   youtubeLogo,
   orangeLogo,
+  phone,
+  laptop,
+  delivery,
+  cardPayment,
 };
