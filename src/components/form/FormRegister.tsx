@@ -21,7 +21,7 @@ const FormRegister = () => {
     } else if (changeStep === 1) {
       setChangeStep(2);
     } else {
-      console.log("Formulário enviado");
+      setChangeStep(0);
     }
   };
 
